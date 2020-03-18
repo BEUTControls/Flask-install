@@ -1,2 +1,22 @@
 # Flask-install
 We will install and setup flask
+
+Site reference: ```http://mattrichardson.com/Raspberry-Pi-Flask/```
+
+```sudo apt-get install python-pip```
+
+```sudo pip install flask```
+
+```sudo nano flask-hello.py```
+
+```
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80, debug=True)
+```
